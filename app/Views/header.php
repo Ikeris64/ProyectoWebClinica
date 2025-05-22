@@ -17,3 +17,19 @@
         <div class="row content">
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
+                <?php 
+                if (isset($data["errors"])){
+                    if (count($data["errors"]) > 0) {
+                        foreach ($data["errors"] as $error) {
+                            print "<div class='alert alert-danger mt-3'>";
+                            foreach ($data["errors"] as $value){
+                                print ".$value.<br>";
+                            }
+                        }
+                        print "</div>";
+                    }
+                }
+                
+                
+                
+                ?>

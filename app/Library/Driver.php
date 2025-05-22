@@ -5,8 +5,8 @@ class Driver{
     function __construct(){}
 
     public function model($model = ""){
-        require_once("../app/models/" . $model . ".php");
-        $model = new $model();
+        require_once("../app/Models/" . $model . ".php");
+        return new $model();
     }
 
     public function view($view="", $data = []){

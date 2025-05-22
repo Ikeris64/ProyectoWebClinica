@@ -1,7 +1,7 @@
 <?php include_once("header.php"); ?>
                     <h1 class = "text-center"><?php print $data["subtitle"]; ?></h1>
                     <div class ="card p-4 bg-light">
-                        <form action="<?php print ROUTE; ?>Login/forgotlogin" method="POST">
+                        <form action="<?php print ROUTE; ?>Login/loginForgot" method="POST">
                             <div class = "form-group text-left">
                                 <label for="Correo">Correo Electronico:</label>
                                 <input type="text" name="Correo" class="form-control" placeholder="Correo Electronico" required>

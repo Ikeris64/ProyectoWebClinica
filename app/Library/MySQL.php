@@ -30,5 +30,20 @@ class MySQL
             exit();
         }
     }
+    public function query($sql= "")
+    {
+        $data =[];
+        $r = mysqli_query($this->conexion, $sql);
+        if($r){
+            if(mysqli_num_rows($r)>0){
+                $data = mysqli_fetch_assoc($r);
+            }
+        }
+        return $data;
+    }
+
+    public function queryNoSelect($sql){
+        return mysqli_query($this->conexion, $sql);
+    }
 }
 ?>
